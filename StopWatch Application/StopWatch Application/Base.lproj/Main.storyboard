@@ -60,6 +60,8 @@
                             <constraint firstItem="zuz-f1-Kg6" firstAttribute="leading" secondItem="DfF-cp-1Iu" secondAttribute="trailing" priority="250" constant="60" id="Ndr-N7-ReE"/>
                             <constraint firstItem="uC4-uZ-TNb" firstAttribute="leading" secondItem="zuz-f1-Kg6" secondAttribute="trailing" priority="250" constant="60" id="eMr-RO-oek"/>
                             <constraint firstItem="DfF-cp-1Iu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="nw0-LK-eiu"/>
+                            <constraint firstItem="uC4-uZ-TNb" firstAttribute="centerY" secondItem="DfF-cp-1Iu" secondAttribute="centerY" id="pcH-hf-6Wk"/>
+                            <constraint firstItem="uC4-uZ-TNb" firstAttribute="centerY" secondItem="DfF-cp-1Iu" secondAttribute="centerY" id="qTG-nQ-mif"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uC4-uZ-TNb" secondAttribute="trailing" constant="8" id="qif-Wk-v3n"/>
                             <constraint firstItem="DfF-cp-1Iu" firstAttribute="centerY" secondItem="zuz-f1-Kg6" secondAttribute="centerY" id="uvA-i8-jTR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uC4-uZ-TNb" secondAttribute="trailing" constant="56" id="wDD-sn-zL5"/>
@@ -67,9 +69,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="qif-Wk-v3n"/>
                                 <exclude reference="wDD-sn-zL5"/>
                                 <exclude reference="5Y3-hE-P4g"/>
                                 <exclude reference="JUd-jL-lE2"/>
+                                <exclude reference="nw0-LK-eiu"/>
                                 <exclude reference="uvA-i8-jTR"/>
                                 <exclude reference="Ndr-N7-ReE"/>
                                 <exclude reference="8gD-t7-a2Q"/>
@@ -79,6 +83,8 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="qif-Wk-v3n"/>
+                                <include reference="nw0-LK-eiu"/>
                                 <include reference="uvA-i8-jTR"/>
                                 <include reference="Ndr-N7-ReE"/>
                                 <include reference="Iin-mL-bj7"/>
