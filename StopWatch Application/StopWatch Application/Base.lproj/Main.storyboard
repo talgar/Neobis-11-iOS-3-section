@@ -15,39 +15,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="pause" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lfA-YX-VFs">
-                                <rect key="frame" x="187" y="475" width="40" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="UGB-EB-SyI"/>
-                                    <constraint firstAttribute="width" constant="40" id="Zo0-eh-zGg"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuz-f1-Kg6">
-                                <rect key="frame" x="176" y="364" width="63" height="36"/>
+                                <rect key="frame" x="49" y="318" width="317" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="play" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Urj-LV-xWH">
-                                <rect key="frame" x="70" y="474.5" width="40" height="36.5"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="stop" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TDr-lc-kGf">
-                                <rect key="frame" x="310" y="475" width="40" height="36"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfF-cp-1Iu">
+                                <rect key="frame" x="120" y="493" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="L0k-dO-mlc"/>
+                                    <constraint firstAttribute="height" constant="40" id="RlB-q9-INT"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yy-Cr-hau"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-uZ-TNb">
+                                <rect key="frame" x="240" y="493" width="40" height="40"/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsS-P2-oA1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lfA-YX-VFs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7BD-xQ-Ybl"/>
-                            <constraint firstItem="TDr-lc-kGf" firstAttribute="width" secondItem="lfA-YX-VFs" secondAttribute="width" id="9g0-aa-Rdt"/>
-                            <constraint firstItem="lfA-YX-VFs" firstAttribute="leading" secondItem="Urj-LV-xWH" secondAttribute="trailing" constant="80" id="9kJ-LZ-u10"/>
-                            <constraint firstItem="TDr-lc-kGf" firstAttribute="baseline" secondItem="lfA-YX-VFs" secondAttribute="baseline" id="ALr-7i-Vfz"/>
-                            <constraint firstItem="TDr-lc-kGf" firstAttribute="baseline" secondItem="Urj-LV-xWH" secondAttribute="baseline" id="EC3-37-Izs"/>
-                            <constraint firstItem="Urj-LV-xWH" firstAttribute="width" secondItem="lfA-YX-VFs" secondAttribute="width" id="Nsg-o4-9ce"/>
-                            <constraint firstItem="Urj-LV-xWH" firstAttribute="height" secondItem="lfA-YX-VFs" secondAttribute="height" id="Pak-sK-vLK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfA-YX-VFs" secondAttribute="bottom" constant="300" id="fJq-6N-Jup"/>
-                            <constraint firstItem="TDr-lc-kGf" firstAttribute="height" secondItem="lfA-YX-VFs" secondAttribute="height" id="iRr-rH-k67"/>
-                            <constraint firstItem="TDr-lc-kGf" firstAttribute="leading" secondItem="lfA-YX-VFs" secondAttribute="trailing" constant="80" id="qFj-iY-VaA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DfF-cp-1Iu" secondAttribute="bottom" constant="280" id="4OR-9F-EkS"/>
+                            <constraint firstItem="uC4-uZ-TNb" firstAttribute="centerY" secondItem="DfF-cp-1Iu" secondAttribute="centerY" id="AD5-KV-Lm3"/>
+                            <constraint firstItem="uC4-uZ-TNb" firstAttribute="leading" secondItem="DfF-cp-1Iu" secondAttribute="trailing" constant="80" id="Whd-x7-2xM"/>
+                            <constraint firstItem="uC4-uZ-TNb" firstAttribute="width" secondItem="DfF-cp-1Iu" secondAttribute="width" id="XMy-Kx-QZQ"/>
+                            <constraint firstItem="uC4-uZ-TNb" firstAttribute="height" secondItem="DfF-cp-1Iu" secondAttribute="height" id="gTI-xK-nki"/>
+                            <constraint firstItem="DfF-cp-1Iu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="tDf-el-ejV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -95,9 +96,8 @@
     </scenes>
     <resources>
         <image name="clock" catalog="system" width="128" height="121"/>
-        <image name="pause" catalog="system" width="88" height="128"/>
-        <image name="play" catalog="system" width="120" height="128"/>
-        <image name="stop" catalog="system" width="128" height="113"/>
+        <image name="play" width="50" height="50"/>
+        <image name="stop" width="50" height="50"/>
         <image name="timer" catalog="system" width="128" height="121"/>
     </resources>
 </document>
