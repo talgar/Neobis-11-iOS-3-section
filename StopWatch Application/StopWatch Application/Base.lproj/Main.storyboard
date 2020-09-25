@@ -44,6 +44,9 @@
                                     <constraint firstAttribute="width" constant="60" id="5oD-7f-soo"/>
                                 </constraints>
                                 <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="updateButtonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mg8-rO-DWm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -68,11 +71,11 @@
                             <mask key="constraints">
                                 <exclude reference="qif-Wk-v3n"/>
                                 <exclude reference="wDD-sn-zL5"/>
+                                <exclude reference="Ndr-N7-ReE"/>
                                 <exclude reference="5Y3-hE-P4g"/>
                                 <exclude reference="JUd-jL-lE2"/>
                                 <exclude reference="nw0-LK-eiu"/>
                                 <exclude reference="uvA-i8-jTR"/>
-                                <exclude reference="Ndr-N7-ReE"/>
                                 <exclude reference="8gD-t7-a2Q"/>
                                 <exclude reference="Iin-mL-bj7"/>
                                 <exclude reference="eMr-RO-oek"/>
@@ -81,9 +84,9 @@
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="qif-Wk-v3n"/>
+                                <include reference="Ndr-N7-ReE"/>
                                 <include reference="nw0-LK-eiu"/>
                                 <include reference="uvA-i8-jTR"/>
-                                <include reference="Ndr-N7-ReE"/>
                                 <include reference="Iin-mL-bj7"/>
                                 <include reference="eMr-RO-oek"/>
                             </mask>
@@ -98,6 +101,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="clock" catalog="system" id="if0-6I-Hbw"/>
+                    <connections>
+                        <outlet property="labelF" destination="zuz-f1-Kg6" id="VhW-US-YC7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
