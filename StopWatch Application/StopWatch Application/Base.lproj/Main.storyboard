@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuz-f1-Kg6" userLabel="Label F">
-                                <rect key="frame" x="0.0" y="368.5" width="414" height="120"/>
+                                <rect key="frame" x="1" y="368.5" width="412" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="7Po-i1-XeZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="412" id="bIS-65-ujO"/>
                                     <constraint firstAttribute="height" constant="120" id="wbc-dj-ojp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
@@ -34,7 +34,7 @@
                                 </constraints>
                                 <state key="normal" image="play"/>
                                 <connections>
-                                    <action selector="playPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yy-Cr-hau"/>
+                                    <action selector="playPauseButtonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yy-Cr-hau"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-uZ-TNb" userLabel="Update button F">
@@ -44,9 +44,6 @@
                                     <constraint firstAttribute="width" constant="60" id="5oD-7f-soo"/>
                                 </constraints>
                                 <state key="normal" image="stop"/>
-                                <connections>
-                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsS-P2-oA1"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,16 +126,16 @@
         <!--View Controller-->
         <scene sceneID="w9i-JI-8if">
             <objects>
-                <viewController id="KTd-mq-KaV" sceneMemberID="viewController">
+                <viewController id="KTd-mq-KaV" customClass="ViewController" customModule="StopWatch_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HxY-qI-reI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKp-gt-ISs" userLabel="Label B">
-                                <rect key="frame" x="0.0" y="368.5" width="414" height="120"/>
+                                <rect key="frame" x="1" y="368.5" width="412" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="FFU-pw-Oox"/>
+                                    <constraint firstAttribute="width" constant="412" id="9FB-NT-1ZU"/>
                                     <constraint firstAttribute="height" constant="120" id="Rtu-iS-Hk8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
@@ -153,7 +150,7 @@
                                 </constraints>
                                 <state key="normal" image="play"/>
                                 <connections>
-                                    <action selector="playPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDC-dQ-c2y"/>
+                                    <action selector="playPauseButtonB:" destination="KTd-mq-KaV" eventType="touchUpInside" id="3rQ-Ng-OK3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLE-F6-dvb" userLabel="Update button B">
@@ -163,9 +160,6 @@
                                     <constraint firstAttribute="width" constant="60" id="rb1-QU-z51"/>
                                 </constraints>
                                 <state key="normal" image="stop"/>
-                                <connections>
-                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9X4-Ww-W0U"/>
-                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-kj-3uV">
                                 <rect key="frame" x="38" y="278.5" width="338" height="31"/>

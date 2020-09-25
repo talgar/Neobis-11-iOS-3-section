@@ -16,22 +16,31 @@ class ViewController: UIViewController {
 
     var toggleState = 1
     
-    @IBAction func playPause(_ sender: UIButton) {
+    @IBAction func playPauseButtonF(_ sender: Any) {
     
-        var playBtn = sender as! UIButton
+        let playPauseBtnF = sender as! UIButton
         if toggleState == 1 {
             player.play()
             toggleState = 2
-            playBtn.setImage(UIImage(named:"pause"),for:UIControl.State.normal)
+            playPauseBtnF.setImage(UIImage(named:"pause"),for:UIControl.State.normal)
         } else {
             player.pause()
             toggleState = 1
-            playBtn.setImage(UIImage(named:"play"),for:UIControl.State.normal)
+            playPauseBtnF.setImage(UIImage(named:"play"),for:UIControl.State.normal)
         }
     }
-
-    @IBAction func updateButton(_ sender: Any) {
-        
+    
+    @IBAction func playPauseButtonB(_ sender: Any) {
+        let playPauseBtnB = sender as! UIButton
+               if toggleState == 1 {
+                   player.play()
+                   toggleState = 2
+                   playPauseBtnB.setImage(UIImage(named:"pause"),for:UIControl.State.normal)
+               } else {
+                   player.pause()
+                   toggleState = 1
+                   playPauseBtnB.setImage(UIImage(named:"play"),for:UIControl.State.normal)
+               }
     }
     
     override func viewDidLoad() {
