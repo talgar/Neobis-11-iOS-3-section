@@ -34,7 +34,7 @@
                                 </constraints>
                                 <state key="normal" image="play"/>
                                 <connections>
-                                    <action selector="playPauseButtonF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yy-Cr-hau"/>
+                                    <action selector="playPauseActionF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yy-Cr-hau"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-uZ-TNb" userLabel="Update button F">
@@ -103,6 +103,7 @@
                     <tabBarItem key="tabBarItem" title="" image="clock" catalog="system" id="if0-6I-Hbw"/>
                     <connections>
                         <outlet property="labelF" destination="zuz-f1-Kg6" id="VhW-US-YC7"/>
+                        <outlet property="playPauseButtonF" destination="DfF-cp-1Iu" id="bSW-Rm-pHr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -156,7 +157,7 @@
                                 </constraints>
                                 <state key="normal" image="play"/>
                                 <connections>
-                                    <action selector="playPauseButtonB:" destination="KTd-mq-KaV" eventType="touchUpInside" id="3rQ-Ng-OK3"/>
+                                    <action selector="playPauseActionB:" destination="KTd-mq-KaV" eventType="touchUpInside" id="3rQ-Ng-OK3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLE-F6-dvb" userLabel="Update button B">
@@ -166,6 +167,9 @@
                                     <constraint firstAttribute="width" constant="60" id="rb1-QU-z51"/>
                                 </constraints>
                                 <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="updateButtonB:" destination="KTd-mq-KaV" eventType="touchUpInside" id="bL2-QB-AMU"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-kj-3uV">
                                 <rect key="frame" x="38" y="278.5" width="338" height="31"/>
@@ -267,6 +271,10 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="JNk-1j-wgH"/>
+                    <connections>
+                        <outlet property="labelB" destination="GKp-gt-ISs" id="ULF-UZ-fJx"/>
+                        <outlet property="playPauseButtonB" destination="fu3-NE-IMI" id="pak-3z-Dve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3df-lp-XG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
