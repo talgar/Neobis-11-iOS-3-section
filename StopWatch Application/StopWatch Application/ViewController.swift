@@ -90,14 +90,6 @@ class ViewController: UIViewController {
         sliderTime.setValue(0, animated: true)
     }
     
-    func timeString(time: TimeInterval) -> String {
-        let hours = Int(time) / 3600
-        let minute = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
-        
-        return String(format:"%02i:%02i:%02i", hours,minute,seconds)
-    }
-    
     @IBAction func sliderTime(_ sender: UISlider) {
         labelB.text = timeString(time: TimeInterval(sender.value))
     }
