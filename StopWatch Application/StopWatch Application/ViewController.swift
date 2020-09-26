@@ -16,14 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var playPauseButtonF: UIButton!
     @IBOutlet weak var playPauseButtonB: UIButton!
 
-    var secondsF  = 0
+    var seconds = 0
     var timer = Timer()
-    var secondsB = 0
     var isTimerRunning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func playPauseActionF(_ sender: Any) {
@@ -61,19 +59,16 @@ class ViewController: UIViewController {
     }
     
     @objc func startF() {
-        secondsF += 1
-        labelF.text = timeString(time: TimeInterval(secondsF))
+        seconds += 1
+        labelF.text = timeString(time: TimeInterval(seconds))
     }
     
     @objc func startB() {
         if sliderTime.value < 1 {
-        timer.invalidate()
+            timer.invalidate()
+            playPauseButtonB.setImage(UIImage(named: "play"), for: .normal)
         } else {
             sliderTime.value -= 1
-            if sliderTime.value == 0 {
-                sliderTime.setValue(0, animated: true)
-                playPauseButtonB.setImage(UIImage(named: "play"), for: .normal)
-            }
             labelB.text = timeString(time: TimeInterval(sliderTime.value))
         }
     }
@@ -82,8 +77,8 @@ class ViewController: UIViewController {
         timer.invalidate()
         isTimerRunning = false
         playPauseButtonF.setImage(UIImage(named: "play"), for: .normal)
-        secondsF = 0
-        labelF.text = timeString(time: TimeInterval(secondsF))
+        seconds = 0
+        labelF.text = timeString(time: TimeInterval(seconds))
     }
     
     @IBAction func updateButtonB(_ sender: Any) {
@@ -105,10 +100,7 @@ class ViewController: UIViewController {
     
     @IBAction func sliderTime(_ sender: UISlider) {
         labelB.text = timeString(time: TimeInterval(sender.value))
-        sliderTime.value = Float(Int(sender.value))
-        
     }
 }
 
-    
 
