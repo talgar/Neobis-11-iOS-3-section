@@ -12,13 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var labelF: UILabel!
     @IBOutlet weak var labelB: UILabel!
-    
+    @IBOutlet weak var sliderTime: UISlider!
     @IBOutlet weak var playPauseButtonF: UIButton!
     @IBOutlet weak var playPauseButtonB: UIButton!
 
     var secondsF  = 0
-    var secondsB  = 10
     var timer = Timer()
+    var secondsB = 0
     var isTimerRunning = false
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             timer.invalidate()
             playPauseButtonB.setImage(UIImage(named:"play"),for:UIControl.State.normal)
         }
-        
+
     }
     
     func runTimerF() {
@@ -60,21 +60,21 @@ class ViewController: UIViewController {
         isTimerRunning = true
     }
     
-    
     @objc func startF() {
         secondsF += 1
         labelF.text = timeString(time: TimeInterval(secondsF))
     }
     
     @objc func startB() {
-        if secondsB < 1 {
-            timer.invalidate()
+        if sliderTime.value < 1 {
+        timer.invalidate()
         } else {
-            secondsB -= 1
-            if secondsB == 0 {
+            sliderTime.value -= 1
+            if sliderTime.value == 0 {
+                sliderTime.setValue(0, animated: true)
                 playPauseButtonB.setImage(UIImage(named: "play"), for: .normal)
             }
-            labelB.text = timeString(time: TimeInterval(secondsB))
+            labelB.text = timeString(time: TimeInterval(sliderTime.value))
         }
     }
     
@@ -90,17 +90,23 @@ class ViewController: UIViewController {
         timer.invalidate()
         isTimerRunning = false
         playPauseButtonB.setImage(UIImage(named: "play"), for: .normal)
-        secondsB = 10 //MARK: add slider
-        labelB.text = timeString(time: TimeInterval(secondsB))
+        sliderTime.value = 0
+        labelB.text = timeString(time: TimeInterval(sliderTime.value))
+        sliderTime.setValue(0, animated: true)
     }
     
-
     func timeString(time: TimeInterval) -> String {
         let hours = Int(time) / 3600
         let minute = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         
         return String(format:"%02i:%02i:%02i", hours,minute,seconds)
+    }
+    
+    @IBAction func sliderTime(_ sender: UISlider) {
+        labelB.text = timeString(time: TimeInterval(sender.value))
+        sliderTime.value = Float(Int(sender.value))
+        
     }
 }
 

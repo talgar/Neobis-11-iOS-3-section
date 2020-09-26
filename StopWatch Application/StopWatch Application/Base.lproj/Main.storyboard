@@ -171,7 +171,7 @@
                                     <action selector="updateButtonB:" destination="KTd-mq-KaV" eventType="touchUpInside" id="bL2-QB-AMU"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-kj-3uV">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="EWj-kj-3uV">
                                 <rect key="frame" x="38" y="278.5" width="338" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="i65-SV-jCg"/>
@@ -186,6 +186,9 @@
                                         <include reference="i65-SV-jCg"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="sliderTime:" destination="KTd-mq-KaV" eventType="valueChanged" id="aT8-Tw-KIx"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -274,6 +277,7 @@
                     <connections>
                         <outlet property="labelB" destination="GKp-gt-ISs" id="ULF-UZ-fJx"/>
                         <outlet property="playPauseButtonB" destination="fu3-NE-IMI" id="pak-3z-Dve"/>
+                        <outlet property="sliderTime" destination="EWj-kj-3uV" id="1Nb-mK-QUo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3df-lp-XG6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
