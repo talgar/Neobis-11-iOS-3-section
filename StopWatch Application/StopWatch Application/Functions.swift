@@ -8,10 +8,15 @@
 
 import Foundation
 
-func timeString(time: TimeInterval) -> String {
-    let hours = Int(time) / 3600
-    let minute = Int(time) / 60 % 60
-    let seconds = Int(time) % 60
+extension Int {
+    func timeString() -> String {
+        let hours = Int(self) / 3600
+        let minute = Int(self) / 60 % 60
+        let seconds = Int(self) % 60
+        
+        return String(format:"%02i:%02i:%02i", hours,minute,seconds)
+    }
     
-    return String(format:"%02i:%02i:%02i", hours,minute,seconds)
 }
+
+
